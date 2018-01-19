@@ -1,0 +1,8 @@
+XDG_DESKTOP_DIR="$HOME/harbour/desktop"
+XDG_DOCUMENTS_DIR="$HOME/harbour/docs"
+XDG_DOWNLOAD_DIR="$HOME/harbour/downloads"
+XDG_MUSIC_DIR="$HOME/harbour/music"
+XDG_PICTURES_DIR="$HOME/harbour/pics"
+XDG_PUBLICSHARE_DIR="$HOME/harbour/public"
+XDG_TEMPLATES_DIR="$HOME/harbour/templates"
+XDG_VIDEOS_DIR="$HOME/harbour/vids

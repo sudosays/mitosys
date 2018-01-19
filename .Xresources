@@ -1,8 +1,8 @@
-!  Xresources file. Use (!) for comments
-
 ! URXVT Settings
+
 URxvt.scrollBar: false
-URxvt.font: xft:DejaVu Sans Mono:size=10
+URxvt.font: xft:Droid Sans Mono:size=10
+
 
 ! Theme color settings
 

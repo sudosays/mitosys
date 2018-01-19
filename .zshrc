@@ -2,8 +2,8 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt extendedglob
-unsetopt autocd beep notify
+setopt autocd extendedglob nomatch
+unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -13,9 +13,11 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-
 autoload -Uz promptinit
 promptinit
 
-PROMPT="%n@%m:%1~%% "
+autoload -U colors
+colors
 
+PROMPT="%{$fg_bold[cyan]%}%n@%m%{$reset_color%}:%{$fg[yellow]%}%1~%{$reset_color%}φ "
+alias ls="ls -l --color=auto"

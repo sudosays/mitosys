@@ -8,6 +8,6 @@ This is stuff like `Xresources` or `zshrc`. Other things that are installation s
 ## How to use this repository ##
 
 1. Clone this repo somewhere easily accessible (like ~)
-2. Where config files are needed simply add "source $mitosis_location/config_file".
+2. Where config files are needed simply link to it like "ln -s ~/mitosys/file ~"
 3. ???
 4. Profit.

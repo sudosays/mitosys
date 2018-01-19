@@ -1,10 +1,6 @@
 " jjstopforths bare vimrc file
 
 
-"" Pathogen setup
-
-execute pathogen#infect()
-
 filetype plugin indent on
 syntax on
 
@@ -26,8 +22,6 @@ set expandtab
 set autoindent
 
 " Visual stuff
-
-let g:airline_theme='sol'
 
 " Line numbers
 

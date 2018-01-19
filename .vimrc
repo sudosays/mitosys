@@ -48,8 +48,8 @@ set number
 
 let mapleader=","
 
-nnoremap <leader>qq :wqa<CR>
-nnoremap <leader>ff :NERDTreeToggle<CR>
+nnoremap <leader>qq :qa<CR>
+nnoremap <leader>wq :wqa<CR>
 nnoremap <leader>fed :e $MYVIMRC<CR>
 nnoremap <leader>fer :source $MYVIMRC<CR>
 nnoremap <leader>ww <C-W>w

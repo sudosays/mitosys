@@ -9,6 +9,8 @@ set spellfile=$HOME/.vim/spell/en.utf-8.add
 
 set spell
 
+set tw=79
+
 " Always show the statusbar
 
 set laststatus=2

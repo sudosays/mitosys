@@ -1,0 +1,7 @@
+#!/usr/bin/zsh
+
+scrot -d 1 --silent /tmp/currentscreen.png
+convert /tmp/currentscreen.png -blur 0x5 /tmp/screenblur.png
+rm /tmp/currentscreen.png
+BG=$( ls /usr/share/backgrounds | shuf -n 1 | awk -F" " '{print $9}' ) 
+i3lock -i /tmp/screenblur.png

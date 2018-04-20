@@ -1,5 +1,26 @@
 " jjstopforths bare vimrc file
 
+execute pathogen#infect()
+
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
+" Powerline stuff
+
+let g:powerline_pycmd="py3"
+
+" Limelight cfg
+
+" Color name (:help cterm-colors) or ANSI code
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+
+" Color name (:help gui-colors) or RGB color
+let g:limelight_conceal_guifg = 'DarkGray'
+let g:limelight_conceal_guifg = '#777777'
+
+" Airline cfg
+let g:airline_powerline_fonts = 1
 
 filetype plugin indent on
 syntax on

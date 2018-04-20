@@ -1,7 +1,7 @@
 ! URXVT Settings
 
 URxvt.scrollBar: false
-URxvt.font: xft:Droid Sans Mono:size=10
+URxvt.font: xft:Droid Sans Mono for Powerline:size=10
 
 
 ! Theme color settings

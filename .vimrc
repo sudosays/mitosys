@@ -5,9 +5,12 @@ execute pathogen#infect()
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
+let g:tex_flavor='latex'
+
 " Powerline stuff
 
-let g:powerline_pycmd="py3"
+let g:airline_theme='minimalist'
+let g:airline_powerline_fonts = 1
 
 " Limelight cfg
 
@@ -18,9 +21,6 @@ let g:limelight_conceal_ctermfg = 240
 " Color name (:help gui-colors) or RGB color
 let g:limelight_conceal_guifg = 'DarkGray'
 let g:limelight_conceal_guifg = '#777777'
-
-" Airline cfg
-let g:airline_powerline_fonts = 1
 
 filetype plugin indent on
 syntax on
@@ -82,4 +82,4 @@ nnoremap <leader>bp :bp<CR>
 nnoremap <leader>wd :q<CR>
 nnoremap <leader><leader> <Esc>:
 inoremap <leader>jj <Esc>
-
+nnoremap <leader>ff :NERDTreeToggle<CR>

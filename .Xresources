@@ -1,8 +1,9 @@
 ! URXVT Settings
 
+URxvt.internalBorder: 12
+
 URxvt.scrollBar: false
 URxvt.font: xft:Droid Sans Mono for Powerline:size=10
-
 
 ! Theme color settings
 

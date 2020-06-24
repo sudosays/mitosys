@@ -27,6 +27,7 @@ TODO: allow exclusion of certain config with '--exclude' or '-x'
 
 import argparse
 import configparser
+import urllib.request
 
 PROG = 'mitosys'
 VERSION = '0.0.1'
@@ -56,7 +57,30 @@ def load_config(file):
 
     return config
 
+def setup_suckless():
+    pass
 
+def setup_st():
+    pass
+
+def setup_dwm():
+    pass
+
+def setup_dwmblocks():
+    pass
+
+def fetch_patches(patches_list):
+    '''TODO: local filename path should be handled with os.join etc
+    '''
+    for patch in patches_list:
+      local_filename, _ = urllib.request.retrieve(patch[1],"./%s" %(patch[0]))
+
+def apply_patches(diff_filenames):
+    '''
+    This should spit out errors and bail if any patch fails to be applied
+    correctly.
+    '''
+    pass
 
 if __name__ == '__main__':
     parser = setup_argparser()

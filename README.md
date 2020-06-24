@@ -23,12 +23,13 @@ Please note that this list is far from exhaustive and complete.
 | Component         | Program             |
 |-------------------|---------------------|
 | Display manager   | xdm + xinit scripts |
-| Window manager    | i3                  |
-| Terminal emulator | urxvt unicode       |
+| Window manager    | dwm                 |
+| Terminal emulator | st                  |
 | Shell             | zsh                 |
 | Text editor\IDE   | vim                 |
-| App launcher      | rofi                |
+| App launcher      | dmenu               |
 | Music player      | mpd + ncmpcpp       |
 | Video player      | mpv                 |
 | File browser      | ranger              |
+| Statusbar         | dwmblocks           |
 

@@ -1,0 +1,42 @@
+#!/usr/bin/python
+
+import urllib.request as urllib
+import json
+import os.path as path
+
+def get_auth_key():
+    auth_key_path = path.expanduser("~/mitosys/keys_secrets/spotstatus_auth.key")
+    with open(auth_key_path, 'r') as f:
+        auth_key = f.read().strip()
+        return auth_key
+
+def write_to_tmpfile(song_info):
+    tmp_file = path.join("/tmp/spotstatus")
+    with open(tmp_file, 'w') as f:
+        f.write(song_info)
+
+def get_current_song_info():
+    api_url = "https://api.spotify.com/v1/me/player/currently-playing"
+    api_method = "GET"
+    api_auth_key = get_auth_key()
+    api_headers = {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer " + api_auth_key 
+    }
+
+    api_request = urllib.Request(api_url, method=api_method, headers=api_headers)
+    api_response = urllib.urlopen(api_request)
+    if api_response.status == 200:
+        song_data = json.loads(api_response.read())
+        song_name = song_data["item"]["name"]
+        song_artist = song_data["item"]["artists"][0]["name"]
+        if len(song_data["item"]["artists"]) > 1:
+            song_artist += " et. al."
+
+        song_info = str(("now playing: %s - %s" % (song_name, song_artist)))
+        print(song_info)
+        write_to_tmpfile(song_info)
+
+if __name__ == "__main__":
+    get_current_song_info()

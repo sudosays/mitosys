@@ -4,11 +4,12 @@ import urllib.request as urllib
 import json
 import os.path as path
 
-def get_auth_key():
-    auth_key_path = path.expanduser("~/mitosys/keys_secrets/spotstatus_auth.key")
-    with open(auth_key_path, 'r') as f:
-        auth_key = f.read().strip()
-        return auth_key
+def get_client_secrets():
+    secrets_path = path.expanduser("~/mitosys/keys_secrets/spotstatus.secrets")
+    with open(secrets_path, 'r') as f:
+        client_id = f.readline().strip()
+        client_secret = f.readline().strip()
+        return (client_id, client_secret) 
 
 def write_to_tmpfile(song_info):
     tmp_file = path.join("/tmp/spotstatus")
@@ -37,6 +38,16 @@ def get_current_song_info():
         song_info = str(("now playing: %s - %s" % (song_name, song_artist)))
         print(song_info)
         write_to_tmpfile(song_info)
+
+
+
+def get_access_token():
+    auth_uri = "https://accounts.spotify.com/authorize" 
+    client_info = get_client_secrets()
+    client_id = client_info[0]
+    response_type = "code"
+    
+
 
 if __name__ == "__main__":
     get_current_song_info()

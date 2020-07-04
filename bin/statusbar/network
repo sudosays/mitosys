@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ "$(cat /sys/class/net/w*/operstate 2> /dev/null)" = "up" ]
+then
+    strength=$(awk '/^\s*w/ {print "", int($3 * 100 / 70) "% " }' /proc/net/wireless)
+    echo "wifi @$strength"
+elif [ "$(cat /sys/class/net/e*/operstate 2> /dev/null)" = "up" ]
+then
+    echo "ether up "
+else
+    echo "没有 "
+fi

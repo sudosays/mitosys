@@ -1,0 +1,13 @@
+#!/bin/sh
+
+current=$(< /sys/class/backlight/intel_backlight/brightness)
+
+((current = current + $1))
+
+if [ $current -lt 0 ]; then
+    current=0;
+elif [ $current -gt 900 ]; then
+    current=900;
+fi
+
+sudo tee /sys/class/backlight/intel_backlight/brightness <<< $current;

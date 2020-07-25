@@ -1,29 +1,50 @@
-! URXVT Settings
+!Solarized color scheme for the X Window System
+!
+! http://ethanschoonover.com/solarized
 
-URxvt.internalBorder: 12
+St.termname: st-256color
 
-URxvt.scrollBar: false
-URxvt.font: xft:Droid Sans Mono for Powerline:size=10
+! Common
 
-! Theme color settings
-URxvt.perl-ext-common: resize-font
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
 
-URxvt.iso14755: false
-URxvt.iso14755_52: false
+!
+! ! Dark
 
-! Light
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
 
-#define S_base03        #fdf6e3
-#define S_base02        #eee8d5
-#define S_base01        #93a1a1
-#define S_base00        #839496
-#define S_base0         #657b83
-#define S_base1         #586e75
-#define S_base2         #073642
-#define S_base3         #002b36
 
-! URxvt*background:            S_base03
-
+! ! Light
+!
+! ! #define S_base03        #fdf6e3
+! ! #define S_base02        #eee8d5
+! ! #define S_base01        #93a1a1
+! ! #define S_base00        #839496
+! ! #define S_base0         #657b83
+! ! #define S_base1         #586e75
+! ! #define S_base2         #073642
+! ! #define S_base3         #002b36
+!
+!
+! ! To only apply colors to your terminal, for example, prefix
+! ! the color assignment statement with its name. Example:
+! !
+! ! URxvt*background:            S_base03
+!
 *background:              S_base03
 *foreground:              S_base0
 *fading:                  40
@@ -50,53 +71,3 @@ URxvt.iso14755_52: false
 *color15:                 S_base3
 
 
-! Theme color settings
-!
-!*.foreground: #F8F8F2
-!*.background: #282A36
-!*.color0:     #000000
-!*.color8:     #4D4D4D
-!*.color1:     #FF5555
-!*.color9:     #FF6E67
-!*.color2:     #50FA7B
-!*.color10:    #5AF78E
-!*.color3:     #F1FA8C
-!*.color11:    #F4F99D
-!*.color4:     #282A36
-!*.color12:    #CAA9FA
-!*.color5:     #FF79C6
-!*.color13:    #FF92D0
-!*.color6:     #8BE9FD
-!*.color14:    #9AEDFE
-!*.color7:     #BFBFBF
-!*.color15:    #E6E6E6
-
-st.foreground: #F8F8F2
-st.background: #FFFFFF
-st.color0:     #282A36
-st.color8:     #4D4D4D
-st.color1:     #FF5555
-st.color9:     #FF6E67
-st.color2:     #50FA7B
-st.color10:    #5AF78E
-st.color3:     #F1FA8C
-st.color11:    #F4F99D
-st.color4:     #F8F8F8
-st.color12:    #CAA9FA
-st.color5:     #FF79C6
-st.color13:    #FF92D0
-st.color6:     #8BE9FD
-st.color14:    #9AEDFE
-st.color7:     #BFBFBF
-st.color15:    #E6E6E6
-
-
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! ------------------------------------------------------------------------------
-rofi.color-enabled: true
-rofi.color-window: #002b37, #002b37, #003642
-rofi.color-normal: #002b37, #819396, #003643, #008ed4, #ffffff
-rofi.color-active: #002b37, #008ed4, #003643, #008ed4, #66c6ff
-rofi.color-urgent: #002b37, #da4281, #003643, #008ed4, #890661
-rofi.font: Droid Sans 12

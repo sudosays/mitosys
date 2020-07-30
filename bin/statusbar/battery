@@ -1,0 +1,9 @@
+#!/bin/sh
+
+PRESENT=$(cat /sys/class/power_supply/BATO/present)
+
+if [ $PRESENT ];
+then
+    echo "Batt present"
+fi
+

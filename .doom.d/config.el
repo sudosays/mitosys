@@ -53,4 +53,13 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 ;;
-(setq Tex-command-default "LatexMk")
+(setq TeX-command-default "LatexMk")
+
+(map! :map TeX-mode-map
+      :localleader
+      :desc "Run TeX commands" "b" #'TeX-command-run-all)
+
+
+
+(setq org-plantuml-jar-path
+      "/usr/share/java/plantuml/plantuml.jar")

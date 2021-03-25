@@ -63,3 +63,16 @@
 
 (setq org-plantuml-jar-path
       "/usr/share/java/plantuml/plantuml.jar")
+
+
+(defun find-TeX-master (depth dir)
+(let ((main-file (nth 0 (directory-files dir t "\\.latexmain$"))))
+        (if main-file
+                (concat (file-name-directory main-file) (file-name-base main-file))
+                (if (> depth 0)
+                    (find-TeX-master (- depth 1) (file-name-directory (directory-file-name dir)))))))
+
+(defun set-TeX-master ()
+  (setq TeX-master (find-TeX-master 1 default-directory)))
+
+(add-hook 'LaTeX-mode-hook #'set-TeX-master)

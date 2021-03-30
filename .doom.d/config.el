@@ -76,3 +76,4 @@
   (setq TeX-master (find-TeX-master 1 default-directory)))
 
 (add-hook 'LaTeX-mode-hook #'set-TeX-master)
+(setq geiser-active-implementations '(mit))

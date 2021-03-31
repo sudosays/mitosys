@@ -77,3 +77,14 @@
 
 (add-hook 'LaTeX-mode-hook #'set-TeX-master)
 (setq geiser-active-implementations '(mit))
+
+(defun goto-term ()
+  (interactive)
+  (set-buffer (make-term "terminal" "/bin/bash"))
+  (term-mode)
+  (term-char-mode)
+(switch-to-buffer "*terminal*"))
+
+
+(map! :leader
+     :desc "Open terminal buffer" "$" #'goto-term)

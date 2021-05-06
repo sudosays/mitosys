@@ -1,0 +1,15 @@
+# Audio/media key config
+"pactl set-sink-volume @DEFAULT_SINK@ +1000; pkill -RTMIN+10 dwmblocks"
+   XF86AudioRaiseVolume
+
+"pactl set-sink-volume @DEFAULT_SINK@ -1000; pkill -RTMIN+10 dwmblocks"
+   XF86AudioLowerVolume
+
+"pactl set-sink-mute @DEFAULT_SINK@ toggle; pkill -RTMIN+10 dwmblocks"
+    XF86AudioMute
+
+"xbacklight -dec 10"
+    XF86MonBrightnessDown
+
+"xbacklight -inc 10"
+    XF86MonBrightnessUp

@@ -1,6 +1,7 @@
 #!/bin/sh
 
-USED=$(df | grep /$ |  sed 's/.*[ 	][ 	]*\([0-9][0-9]*%\).*/\1/')
+USED=$(df -BG | grep /$ |  sed 's/.*[ 	][ 	]*\([0-9][0-9]*%\).*/\1/')
 #df | grep /$ |  sed 's/.*[ 	][ 	]*\([0-9][0-9]*%\).*/\1/'
+AVAIL=$(df -BG | grep /$ |  sed 's/.*[ 	][ 	]*\([0-9][0-9]*G\).*/\1/')
 
-echo "$USED "
+echo "$USED [$AVAIL free] "

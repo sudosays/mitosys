@@ -32,6 +32,8 @@ set spell
 
 set tw=79
 
+set background=dark
+
 " Always show the statusbar
 
 set laststatus=2

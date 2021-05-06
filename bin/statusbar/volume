@@ -1,0 +1,10 @@
+#!/bin/sh
+
+LEVEL="$(amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{print $2}')"
+STATUS="$(amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{print $4}')"
+
+if [ "$STATUS" = "off" ]; then
+    echo "MUTE "
+else
+    echo "vol $LEVEL "
+fi

@@ -15,6 +15,11 @@ This is stuff like `Xresources` or `zshrc`. Other things that are installation s
 3. ???
 4. Profit.
 
+Future features:
+
++ config 'profiles' that layer on top of a base profile e.g.
+  laptop/desktop/server
+
 ## Program stack ##
 
 Below is a list of the software I use for my system and their applications.
@@ -33,3 +38,21 @@ Please note that this list is far from exhaustive and complete.
 | File browser      | ranger              |
 | Statusbar         | dwmblocks           |
 
+Utility programs:
+
+* xorg-xbacklight
+* xorg-xbindkeys
+
+
+## Config notes ###
+
+### `st` ###
+
+Patches to apply (in order):
++ xresources
++ anysize
++ scrollback
+
+Other configs:
+
+font sie 18 font inconsolata

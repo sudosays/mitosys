@@ -1,2 +1,4 @@
 .vim/bundle/*
 keys_secrets/
+venv/
+__pycache__/

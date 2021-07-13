@@ -3,57 +3,62 @@
 
 _"Cell division and replication for my dotfiles"_
 
-## The place to find my dotfiles and migration strategies ##
+## Features
 
-The main branch is for dotfiles and items that remain the same across machines and installations.
+The proposed features for this program are:
 
-This is stuff like `Xresources` or `zshrc`. Other things that are installation specific may be things like `.xsession` stuff or mpd stuff.
-
-## How to use this repository ##
-
-1. Clone this repo somewhere easily accessible (like ~)
-2. Where config files are needed simply link to it like "ln -s ~/mitosys/file ~"
-3. ???
-4. Profit.
+| Argument    | Action/Name | Description                                             |
+|-------------|-------------|---------------------------------------------------------|
+| -c --create | Create      | Creates a backup/initialisation of the current dotfiles |
+| -m [name]   | Mutate      | Modifies an existing backup, creating a branch          |
+| -u          | Update      | Updates/syncs the existing strain of dotfiles           |
+| -i          | Infect      | Deploys dotfiles, overwriting existing setup            |
+|             |             |                                                         |
 
 Future features:
 
 + config 'profiles' that layer on top of a base profile e.g.
   laptop/desktop/server
 
-## Program stack ##
+## Configuration
 
-Below is a list of the software I use for my system and their applications.
-Please note that this list is far from exhaustive and complete.
+Each mutation has a set of setups and recipes with a list of the files needed and where they need to be placed.
 
-| Component         | Program             |
-|-------------------|---------------------|
-| Display manager   | xdm + xinit scripts |
-| Window manager    | dwm                 |
-| Terminal emulator | st                  |
-| Shell             | zsh                 |
-| Text editor\IDE   | vim                 |
-| App launcher      | dmenu               |
-| Music player      | mpd + ncmpcpp       |
-| Video player      | mpv                 |
-| File browser      | ranger              |
-| Statusbar         | dwmblocks           |
+An example config is:
 
-Utility programs:
+``` json
+{
+  mutation-name:"trunk",
+  ancestor:"",
+  mitosys-version:"0.0.0"
+  files: [
+    {
+    filename:".zshrc",
+    path:"~"
+    },
+    {
+    filename:".Xresources",
+    path:"~"
+    },
+  ]
+}
+```
 
-* xorg-xbacklight
-* xorg-xbindkeys
+Deploy recipes specify how to setup a new environment (kind of like Luke Smith's
+LARBS (https://github.com/LukeSmithxyz/LARBS)).  These take into account
+dependencies as well as setup steps. NB! It is a GIGO (garbage in, garbage out)
+system. Mangled setup scripts will result in mangled setups, but in future
+perhaps some error-checking/abandonment can be done using a tmp setup folder.
 
+Recipes are specified as scripts `.sh`.
 
-## Config notes ###
+## Installing
 
-### `st` ###
+## How to use this package
 
-Patches to apply (in order):
-+ xresources
-+ anysize
-+ scrollback
+See features
 
-Other configs:
+## Contributing
 
-font sie 18 font inconsolata
+Please feel free to open issues/comments/requests. I cannot garuantee that I
+will be super-actively developing this, but I appreciate your input nonetheless.

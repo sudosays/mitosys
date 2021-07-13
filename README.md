@@ -1,4 +1,5 @@
-# Mitosys #
+
+![mitosys](./logo512.png)
 
 _"Cell division and replication for my dotfiles"_
 

@@ -19,8 +19,8 @@ promptinit
 autoload -U colors
 colors
 
-PROMPT="%{$fg_bold[cyan]%}%n@%m%{$reset_color%}:%{$fg[yellow]%}%1~%{$reset_color%}φ "
-alias ls="ls -l --color=auto"
+PROMPT="%{$fg_bold[cyan]%}%n@%m%{$reset_color%}:%{$fg[yellow]%}%~%{$reset_color%}"$'\n'"φ> "
+alias ls="ls --color=auto"
 
 #powerline-daemon -q
 #. /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh

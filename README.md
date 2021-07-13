@@ -54,6 +54,20 @@ Recipes are specified as scripts `.sh`.
 
 ## Installing
 
+It is recommended to use a virtual environment when hacking on `mitosys`:
+
+``` sh
+python3 -m venv ./env
+source ./env/bin/activate
+```
+
+Installation is easy with `pip` since it uses `setuptools`:
+``` sh
+pip install .
+```
+
+This also produces a console entrypoint `ms-cli`.
+
 ## How to use this package
 
 See features

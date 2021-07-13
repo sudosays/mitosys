@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 '''
 This script will eventually be used for me to maintain a consistent config
 across my various systems. 
@@ -30,8 +28,7 @@ import configparser
 import urllib.request
 
 PROG = 'mitosys'
-VERSION = '0.0.1'
-
+VERSION = "0.0.1"
 DESCRIPTION = 'Duplicate system setup with mutation'
 
 def setup_argparser(): 
@@ -57,24 +54,6 @@ def load_config(file):
 
     return config
 
-def setup_suckless():
-    pass
-
-def setup_st():
-    pass
-
-def setup_dwm():
-    pass
-
-def setup_dwmblocks():
-    pass
-
-def fetch_patches(patches_list):
-    '''TODO: local filename path should be handled with os.join etc
-    '''
-    for patch in patches_list:
-      local_filename, _ = urllib.request.retrieve(patch[1],"./%s" %(patch[0]))
-
 def apply_patches(diff_filenames):
     '''
     This should spit out errors and bail if any patch fails to be applied
@@ -82,7 +61,7 @@ def apply_patches(diff_filenames):
     '''
     pass
 
-if __name__ == '__main__':
+def run():
     parser = setup_argparser()
     args = parser.parse_args()
 
@@ -90,3 +69,5 @@ if __name__ == '__main__':
     print(config.sections())
     print('vim' in config)
     print([x for x in config['vim.plugins']])
+
+

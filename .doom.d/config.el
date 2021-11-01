@@ -19,13 +19,14 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "monospace" :size 16)
-       doom-variable-pitch-font (font-spec :family "DejaVu Serif" :size 13))
+(setq doom-font (font-spec :family "monospace" :name "Inconsolata" :size 20)
+doom-variable-pitch-font (font-spec :family "serif" :name "Times New Roman"  :size 16))
+
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-Iosvkem)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -33,7 +34,7 @@
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+;;(setq display-line-numbers-type t)
 
 
 ;; Here are some additional functions/macros that could help you configure Doom:
@@ -59,12 +60,6 @@
       :localleader
       :desc "Run TeX commands" "b" #'TeX-command-run-all)
 
-
-
-(setq org-plantuml-jar-path
-      "/usr/share/java/plantuml/plantuml.jar")
-
-
 (defun find-TeX-master (depth dir)
 (let ((main-file (nth 0 (directory-files dir t "\\.latexmain$"))))
         (if main-file
@@ -80,7 +75,7 @@
 
 (defun goto-term ()
   (interactive)
-  (set-buffer (make-term "terminal" "/bin/bash"))
+  (set-buffer (make-term "terminal" "/usr/bin/fish"))
   (term-mode)
   (term-char-mode)
 (switch-to-buffer "*terminal*"))
@@ -88,3 +83,6 @@
 
 (map! :leader
      :desc "Open terminal buffer" "$" #'goto-term)
+
+(setq doom-themes-treemacs-enable-variable-pitch nil)
+

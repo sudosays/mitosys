@@ -19,8 +19,8 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "monospace" :name "Inconsolata" :size 20)
-doom-variable-pitch-font (font-spec :family "serif" :name "Times New Roman"  :size 16))
+(setq doom-font (font-spec :family "monospace" :name "Inconsolata" :size 20))
+;;doom-variable-pitch-font (font-spec :family "serif" :name "Times New Roman"  :size 16))
 
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
@@ -86,3 +86,10 @@ doom-variable-pitch-font (font-spec :family "serif" :name "Times New Roman"  :si
 
 (setq doom-themes-treemacs-enable-variable-pitch nil)
 
+
+;; The below code lets us use pygments style code higlighting with minted for latex export in org
+(setq org-latex-listings 'minted
+      org-latex-packages-alist '(("" "minted"))
+      org-latex-pdf-process
+      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))

@@ -54,6 +54,8 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 ;;
+;;
+;;Custom LaTeX stuff
 (setq TeX-command-default "LatexMk")
 
 (map! :map TeX-mode-map
@@ -71,8 +73,13 @@
   (setq TeX-master (find-TeX-master 1 default-directory)))
 
 (add-hook 'LaTeX-mode-hook #'set-TeX-master)
+(setq +latex-viewers '(okular))
+(add-hook 'LaTeX-mode-hook #'auto-fill-mode)
+
+;; Custom other
 (setq geiser-active-implementations '(mit))
 
+;; Open a terminal window
 (defun goto-term ()
   (interactive)
   (set-buffer (make-term "terminal" "/usr/bin/fish"))
@@ -80,12 +87,11 @@
   (term-char-mode)
 (switch-to-buffer "*terminal*"))
 
-
+;; Set term command
 (map! :leader
      :desc "Open terminal buffer" "$" #'goto-term)
 
 (setq doom-themes-treemacs-enable-variable-pitch nil)
-
 
 ;; The below code lets us use pygments style code higlighting with minted for latex export in org
 (setq org-latex-listings 'minted

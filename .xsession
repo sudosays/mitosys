@@ -10,4 +10,6 @@ dunst &
 
 dwmblocks &
 
+emacs --daemon &
+
 exec dwm 

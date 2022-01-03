@@ -19,7 +19,7 @@ promptinit
 autoload -U colors
 colors
 
-PROMPT="%{$fg_bold[cyan]%}%n@%m%{$reset_color%}:%{$fg[yellow]%}%~%{$reset_color%}"$'\n'"φ> "
+PROMPT="%{$fg_bold[cyan]%}%n@%m%{$reset_color%}:%{$fg[yellow]%}%2~%{$reset_color%}"$'\n'"φ> "
 alias ls="ls --color=auto"
 
 #powerline-daemon -q

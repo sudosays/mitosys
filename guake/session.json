@@ -1,0 +1,25 @@
+{
+    "schema_version": 2,
+    "timestamp": 1643658983,
+    "workspace": {
+        "0": [
+            [
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/julius",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "Terminal",
+                    "custom_label_set": false
+                }
+            ]
+        ]
+    }
+}

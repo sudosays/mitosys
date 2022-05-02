@@ -28,7 +28,7 @@
        :ui
        ;;deft              ; notational velocity for Emacs
        doom              ; what makes DOOM look the way it does
-       doom-dashboard    ; a nifty splash screen for Emacs
+       ;doom-dashboard    ; a nifty splash screen for Emacs
        doom-quit         ; DOOM quit-message prompts when you quit Emacs
        (emoji +unicode)  ; 🙂
        ;;fill-column       ; a `fill-column' indicator
@@ -80,7 +80,7 @@
 
        :checkers
        syntax              ; tasing you for every semicolon you forget
-       ;;(spell +flyspell) ; tasing you for misspelling mispelling
+       (spell +aspell) ; tasing you for misspelling mispelling
        ;;grammar           ; tasing grammar mistake every you make
 
        :tools
@@ -113,7 +113,7 @@
        ;;agda              ; types of types of types of types...
        cc                ; C/C++/Obj-C madness
        ;;clojure           ; java with a lisp
-       ;;common-lisp       ; if you've seen one lisp, you've seen them all
+       common-lisp       ; if you've seen one lisp, you've seen them all
        ;;coq               ; proofs-as-programs
        ;;crystal           ; ruby at the speed of c
        ;;csharp            ; unity, .NET, and mono shenanigans
@@ -137,7 +137,7 @@
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
        julia             ; a better, faster MATLAB
        ;;kotlin            ; a better, slicker Java(Script)
-       (latex +latexmk)            ; writing papers in Emacs has never been so fun
+       (latex +latexmk +fold)            ; writing papers in Emacs has never been so fun
        ;;lean
        ;;factor
        ;;ledger            ; an accounting system in Emacs

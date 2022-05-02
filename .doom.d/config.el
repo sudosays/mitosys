@@ -26,7 +26,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-Iosvkem)
+(setq doom-theme 'doom-one)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -55,6 +55,9 @@
 ;; they are implemented.
 ;;
 ;;
+
+(use-package! void)
+
 ;;Custom LaTeX stuff
 (setq TeX-command-default "LatexMk")
 
@@ -99,3 +102,8 @@
       org-latex-pdf-process
       '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
         "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+
+(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+
+(map! :map cdlatex-mode-map
+    :i "TAB" #'cdlatex-tab)
